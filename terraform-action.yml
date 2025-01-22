@@ -1,7 +1,11 @@
 name: "Terraform Action"
 description: "Install, setup, and run Terraform init."
+inputs:
+  working_directory:
+    description: "Working directory for Terraform to initialize."
+    required: true
 runs:
-  using: 'composite'
+  using: composite
   steps:
     - name: Install Terraform
       uses: hashicorp/setup-terraform@v3
@@ -9,3 +13,4 @@ runs:
       uses: hashicorp/setup-terraform@v2
     - name: Run Terraform Init
       run: terraform init
+        working-directory: ${{ working_directory }}
