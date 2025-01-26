@@ -13,4 +13,4 @@ runs:
       uses: hashicorp/setup-terraform@v2
     - name: Run Terraform Init
       run: terraform init
-        working-directory: ${{ inputs.working-directory }}
+      working-directory: ${{ inputs.working-directory }}
