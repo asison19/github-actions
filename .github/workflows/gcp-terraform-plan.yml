@@ -4,25 +4,32 @@ on:
     inputs:
       gcp-wif-project-number:
         description: "GCP Workload Identity Federation project number."
+        type: string
         required: true
       pool-id:
         description: "GCP Workload Identity Federation Pool ID."
+        type: string
         required: true
       provider-id:
         description: "GCP Workload Identity Federation Provider ID."
+        type: string
         required: true
       working-directory:
         description: "Working directory for Terraform to initialize."
+        type: string
         required: true
       gcp-project-id:
         description: "GCP project ID."
+        type: string
         required: true
       environment:
         description: "GitHub environment to run on."
+        type: string
         required: true
     secrets:
       gcp-service-account-email:
         description: "GCP service account email for use with Terraform."
+        type: string
         required: true
 jobs:
   terraform-plan:
