@@ -17,12 +17,16 @@ on:
       gcp-project-id:
         description: "GCP project ID."
         required: true
+      environment:
+        description: "GitHub environment to run on."
+        required: true
     secrets:
       gcp-service-account-email:
         description: "GCP service account email for use with Terraform."
         required: true
 jobs:
   terraform-plan:
+    environment: ${{ inputs.environment }}
     permissions:
       contents: 'read'
       id-token: 'write'
