@@ -37,7 +37,7 @@ jobs:
           workload_identity_provider: 'projects/${{ inputs.gcp-wif-project-number }}/locations/global/workloadIdentityPools/${{ inputs.pool-id }}/providers/${{ inputs.provider-id }}'
           service_account: '${{ secrets.gcp-service-account-email }}'
       - name: Terraform init
-        uses: asison19/github-actions/composite-actions/terraform-action
+        uses: asison19/github-actions/composite-actions/terraform-action@v1
         with:
           working-directory: ${{ inputs.working-directory }}
       - name: Run Terraform Plan
