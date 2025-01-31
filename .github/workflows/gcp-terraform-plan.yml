@@ -29,7 +29,6 @@ on:
     secrets:
       gcp-service-account-email:
         description: "GCP service account email for use with Terraform."
-        type: string
         required: true
 jobs:
   terraform-plan:
