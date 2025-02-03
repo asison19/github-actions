@@ -17,3 +17,4 @@ runs:
       shell: bash
     - name: Run Terraform Validate
       run: terraform validate -no-color
+      shell: bash
