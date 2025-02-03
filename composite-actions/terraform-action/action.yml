@@ -15,3 +15,5 @@ runs:
       run: terraform init
       working-directory: ${{ inputs.working-directory }}
       shell: bash
+    - name: Run Terraform Validate
+      run: terraform validate -no-color
