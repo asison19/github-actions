@@ -10,7 +10,7 @@ runs:
     - name: Install Terraform
       uses: hashicorp/setup-terraform@v3
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v2
+      uses: hashicorp/setup-terraform@v3
     - name: Run Terraform Init
       run: terraform init
       working-directory: ${{ inputs.working-directory }}

@@ -1,2 +1,2 @@
 # Summary
-GitHub composite actions
+GitHub reusable workflows and composite actions
